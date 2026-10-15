@@ -1,0 +1,41 @@
+mark.hlr-mark {
+  background: #f5d77a !important;
+  color: #1d2129 !important;
+  border-radius: 2px;
+  padding: 0;
+  cursor: pointer;
+}
+mark.hlr-mark.hlr-flash {
+  animation: hlr-flash 1.8s ease-out;
+}
+@keyframes hlr-flash {
+  0%, 55% { box-shadow: 0 0 0 5px #8a5326; }
+  100% { box-shadow: 0 0 0 0 rgba(138, 83, 38, 0); }
+}
+.hlr-pop, .hlr-toast {
+  all: initial;
+  position: absolute;
+  z-index: 2147483647;
+  font: 13px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #1d2129;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+.hlr-pop button {
+  all: unset;
+  display: block;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #fff;
+  font: inherit;
+  border-radius: 6px;
+}
+.hlr-pop button:hover, .hlr-pop button:focus-visible { background: #8a5326; }
+.hlr-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  padding: 9px 14px;
+}

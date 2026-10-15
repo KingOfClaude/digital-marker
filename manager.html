@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Highlighter</title>
+  <link rel="icon" href="icons/icon48.png">
+  <link rel="stylesheet" href="manager.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <h1>Digital Highlighter</h1>
+      <p class="count" id="total"></p>
+      <h2 class="label" id="sites-label">Sites</h2>
+      <nav id="sites" aria-label="Filter by site"></nav>
+    </aside>
+
+    <main>
+      <div class="bar">
+        <input type="search" id="q" placeholder="Search your highlights (press / to focus)" aria-label="Search highlights" autocomplete="off">
+        <select id="sort" aria-label="Sort order">
+          <option value="new">Newest first</option>
+          <option value="old">Oldest first</option>
+        </select>
+        <button type="button" class="btn" id="export" title="Exports the highlights currently shown">Export Markdown</button>
+      </div>
+      <div id="list"></div>
+      <section id="empty" class="empty" hidden></section>
+    </main>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="manager.js"></script>
+</body>
+</html>
